@@ -35,4 +35,11 @@ Route::get('products', [\App\Http\Controllers\ProductController::class, 'index']
 Route::get('products/create', \App\Livewire\ProductsCreate::class)->name('products.create');
 Route::get('products/{product}/edit', \App\Livewire\ProductsEdit::class)->name('products.edit');
 
+Route::get('paises', \App\Livewire\Dropdowns::class)->name('paises.index');
+
+Route::get('produtos', \App\Livewire\ParentChildren::class)->name('produtos.index');
+Route::get('produtos/editar', \App\Livewire\EditModal::class)->name('produtos.editar');
+
+Route::get('animals', \App\Livewire\Autorefresh::class)->name('animals.index');
+
 require __DIR__.'/auth.php';
